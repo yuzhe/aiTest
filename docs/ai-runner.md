@@ -8,6 +8,18 @@
 - 本地已安装并登录 Codex CLI。
 - 如果需要回写 GitHub 评论、创建 Issue 或创建 PR，需要安装并登录 `gh` CLI。
 
+## 快速试跑
+
+完成“前置条件”后，可以按顺序复制以下命令完成一次本地 dry-run：
+
+```bash
+python -m ai_runner.runner init
+python -m ai_runner.runner review-prd --prd docs/requirements/2026-07-用户列表手机号搜索.md --dry-run
+python -m ai_runner.runner status
+```
+
+`--dry-run` 不会真实调用 AI 生成评审结果，也不会创建 Issue、PR 或修改远端 GitHub 数据。
+
 ## 初始化
 
 ```bash
