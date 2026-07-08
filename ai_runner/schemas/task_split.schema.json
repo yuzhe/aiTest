@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tasks", "notes"],
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "body", "labels"],
+        "properties": {
+          "title": { "type": "string" },
+          "body": { "type": "string" },
+          "labels": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}
+
